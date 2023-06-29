@@ -1,0 +1,453 @@
+/****** General ***********/
+
+/* Applique la police 'Raleway' à tous les éléments */
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Définit les variables de couleur */
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+/* Applique la couleur principale aux icônes */
+.fa-solid {
+    color: var(--main-color);
+}
+
+/* Mise en page générale du corps du document */
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.read-more {
+    text-align: left ;
+}
+
+/* Conteneur principal avec une largeur maximale de 1440px */
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+/* Style des titres de sections */
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Style des articles */
+
+.card {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    cursor: pointer; /* Ajout de la propriété pour changer le curseur au survol */
+}
+
+.card h3 {
+    color: black;
+    font-weight: bold;
+}
+
+.card:hover {
+    background-color: lightblue; /* Changement de la couleur de fond au survol */
+}
+
+.card:active {
+    background-color: lightblue; /* Changement de la couleur de fond lors du clic */
+}
+
+
+/* Ajuste l'affichage de l'image de la carte */
+.card img {
+    object-fit: cover;
+}
+
+/* Style du titre de la carte */
+.card-title {
+    font-size: 16px;
+}
+
+/* Style de l'euro dans le sous-titre de la carte */
+.euro {
+    font-weight: 700;
+}
+
+/* Style de l'étoile neutre dans le classement */
+.neutral-star {
+    color: var(--main-bg-color);
+}
+
+/****** Header ***********/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Pour centrer verticalement le logo */
+    margin-bottom: 3Opx;
+}
+
+.header-logo {
+    height: 30px;
+    width: 50px;
+    margin-right: 10px; /* Espacement à droite du logo */
+    padding-top : 10px;
+}
+
+.header-links {
+    display: flex;
+    align-items: center; /* Pour centrer verticalement les liens */
+}
+
+.header-links a {
+    text-decoration: none; /* Supprimer la soulignement par défaut des liens */
+    margin-right: 30px; /* Espacement horizontal entre les liens */
+    position: relative; /* Permet de positionner la barre au survol */
+    color : black;
+}
+
+.header-links a:hover {
+    color: lightblue; /* Couleur du texte au survol */
+}
+
+.header-links a:hover::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Positionner la barre en-dessous du texte */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: lightblue; /* Couleur de la barre au survol */
+}
+
+/****** Slogan ***********/
+
+.sloggan {
+    margin-bottom : 35px;
+}
+
+.sloggan h2 {
+    margin-bottom : 3px;
+}
+/****** Barre de recherche ***********/
+
+form {
+    display : flex;
+    flex-direction: row;
+    height : 50px;
+    margin-bottom: 35px;
+}
+  
+.recherche-icon {
+    padding : 16px 18px 16px 18px;
+    background : var(--main-bg-color);
+    border-radius : 15px 0 0 15px;
+
+}
+
+.recherche-icon i {
+    color : black;
+    font-style: bold;
+}
+
+.recherche form .champ-recherche {
+    color: black !important;
+    font-weight: bold !important;
+    font-size : 1.3em !important;
+    text-align: center;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
+    border-left: none;
+    border-right: none;
+}
+
+.recherche form .bouton-recherche {
+    color: white !important;
+    background-color: var(--main-color);
+    font-weight: bold !important;
+    font-size : 1.1em !important;
+    text-align: center;
+    border-radius : 0 15px 15px 0px;
+    border : none;
+    padding : 16px
+}
+
+/****** Filtres ***********/
+.filtres {
+    display: flex;
+    align-items: center; /* Pour centrer verticalement les éléments */
+    margin-bottom: 35px;
+  }
+  
+.filtres h3{
+    margin-right: 15px;
+}
+
+  .filtre-clickable {
+    display: flex;
+    align-items: center; /* Pour centrer verticalement l'icône et le texte */
+    background-color: white;
+    border: 1px solid lightgray; /* Bordure gris clair */
+    border-radius: 25px;
+    padding-top: 2px;
+    padding-bottom : 2px;
+    padding-right : 10px;
+    padding-left : 10px;
+    margin-right: 15px; /* Espacement horizontal entre les filtres */
+    max-height: 50px; /* Hauteur maximale de 50px */
+    transition: background-color 0.3s; /* Transition au survol */
+    cursor: pointer;
+  }
+  
+  .filtre-clickable:hover {
+    background-color: lightblue; /* Fond bleu clair au survol */
+  }
+  
+  .filtre-clickable i {
+    color: var(--main-color); /* Couleur bleue */
+    font-weight: bold; /* Texte en gras */
+    font-size: 22px; /* Taille de l'icône */
+    margin-right: 5px; /* Espacement horizontal entre l'icône et le texte */
+  }
+  
+  .filtre-clickable p {
+    font-weight: bold; /* Texte en gras */
+  }
+  
+
+/****** Information recherche ***********/
+.information-recherche {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Aligne les éléments horizontalement */
+    margin-bottom: 35px;
+  }
+  
+.information-recherche i {
+    margin-right: 10px; /* Espacement horizontal entre l'icône et le paragraphe */
+    color: var(--main-bg-color); /* Couleur du texte de l'icône */
+    background-color: var(--main-color); /* Couleur de fond de l'icône */
+    border: 1px solid var(--filter-bg-color); /* Bordure grise d'épaisseur 1px autour de l'icône */
+    padding : 5px;
+    border-radius : 30px;
+
+}
+
+.information-recherche p{
+    color : black;
+}
+
+/****** Hebergements And Populaires ***********/
+
+/* Mise en page des sections 'hebergements' et 'populaires' */
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style des sections 'hebergements' et 'populaires' */
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+
+/* Largeur de la section */
+.hebergements {
+    width: 65%;
+}
+
+.hebergements-title{
+    margin-bottom : 20px;
+}
+
+.hebergements-cards { /* Gestion flexbox de la liste d'articles d'hébergement */
+display : flex;
+flex-direction: row;
+flex-wrap : wrap;
+justify-content: space-around; /* Espacement horizontal entre cards */
+align-items: stretch; /* Espacement vertical entre cards */
+}
+
+/* Redimensionnement des images à la taille du container */
+.hebergements-cards .card img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px 20px 0 0;
+}
+
+.hebergements-cards .card  {
+    flex-basis: 30%; /* A 33% le wrap se fait mal */
+    margin-bottom: 20px;
+}
+
+/****** Activités ***********/
+
+.activitées {
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.activitées-card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .activitées-card .card {
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .activitées-card .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+
+/****************** Footer *****************************/
+/* Appliquer un affichage flex sur le conteneur principal (le footer) */
+footer {
+    background-color:var(--main-bg-color) ;
+    margin-top: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Appliquer un affichage flex sur les éléments ayant la classe "footer_section" */
+  .footer_section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  /* Aligner les éléments sur l'axe horizontal */
+  .footer_section h3, .footer_section p {
+    align-self: flex-start;
+  }
+  
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards .card {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    header {
+      flex-direction: column; /* Permet d'empiler les éléments en colonne */
+      align-items: center; /* Centre les éléments horizontalement */
+    }
+    
+    .header-logo {
+      margin-bottom: 10px; /* Ajoute une marge en bas pour espacer le logo des liens de navigation */
+    }
+    
+    .header-links {
+      margin-top: 10px; /* Ajoute une marge en haut pour espacer les liens de navigation du logo */
+    }
+    
+    .sloggan h2 {
+        font-size: 1.1em; /* Taille de police relative en fonction de l'élément parent */
+      }
+    
+    .sloggan p {
+        font-size: 0.75em; /* Taille de police relative en fonction de l'élément parent */
+      }
+
+    .recherche {
+        width : 15%;
+    }
+
+  }
