@@ -425,6 +425,11 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+    body {
+        overflow-x: hidden;
+      }
+
     header {
       flex-direction: column; /* Permet d'empiler les éléments en colonne */
       align-items: center; /* Centre les éléments horizontalement */
@@ -446,8 +451,80 @@ footer {
         font-size: 0.75em; /* Taille de police relative en fonction de l'élément parent */
       }
 
-    .recherche {
-        width : 15%;
+    .recherche form {
+        display: flex;
+        max-width : 90%;
+    }
+    .filtres {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width : 100%;
+    
+      }
+      
+    .filtres p {
+        font-size: 0.75em;
     }
 
+    .filtres h3 {
+        width: 100%;
+      }
+      
+      
+    .filtre-clickable {
+        box-sizing: border-box;
+          width: 45%;
+        margin-top: 20px;
+    }
+
+
+
+    .activitées-card {
+        flex-wrap: wrap;
+    }
+    
+    .activitées-card .card {
+        max-width: 100%; 
+        margin-bottom: 20px;
+        max-height : 30%
+    }
+
+    .hebergements {
+        width: 100%;
+      }
+    
+      .hebergements-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .hebergements-cards .card {
+        width: 100%;
+      }
+
+    .populaires {
+        width : 100%;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .populaires-cards .card {
+        width: 100%;
+      }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_section {
+        width : 100%;
+    }
   }
