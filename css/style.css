@@ -16,6 +16,14 @@
     --hover-article : lightblue;
 }
 
+p, h2 {
+ margin : 0;
+}
+
+h3{
+    text-transform: capitalize;
+}
+
 /* Applique la couleur principale aux icônes */
 .fa-solid {
     color: var(--main-color);
@@ -119,6 +127,7 @@ header {
     margin-top : 2px;
     color : var(--black);
     box-sizing: border-box;
+    padding-top : 14px;
 }
 
 .header-links a:hover {
@@ -132,11 +141,15 @@ header {
 
 .sloggan {
     margin-bottom : 35px;
+    display : flex;
+    flex-direction: column;
+    gap : 8px;
 }
 
 .sloggan h2 {
     margin-bottom : 3px;
 }
+
 /****** Barre de recherche ***********/
 
 form {
@@ -233,6 +246,7 @@ form {
     gap : 10px;
     transition: background-color 0.3s; /* Transition au survol */
     cursor: pointer;
+    box-sizing: border-box;
   }
   
   .filtre-clickable:hover {
@@ -252,6 +266,7 @@ form {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-transform: capitalize;
   }
   
 
@@ -309,6 +324,9 @@ form {
 /* Largeur de la section */
 .hebergements {
     width: 871px;
+    display : flex;
+    flex-direction : column;
+    gap : 30px;
 }
 
 .hebergements-title{
@@ -320,6 +338,7 @@ display : flex;
 flex-direction: row;
 flex-wrap : wrap;
 justify-content: space-around;
+gap : 30px;
 
 }
 
@@ -327,7 +346,6 @@ justify-content: space-around;
     width: 29%;
    height : 207.25px;
     padding-bottom: 25px;
-    margin-bottom: 30px;
     box-sizing: border-box;
 }
 
@@ -415,6 +433,9 @@ flex-shrink: 0;
 /****** Populaires ***********/
 .populaires {
     width: 429px;
+    display : flex;
+    flex-direction: column;
+    gap : 30px;
 }
 
 .populaires-title {
@@ -423,9 +444,14 @@ flex-shrink: 0;
     align-items: center;
 }
 
+.populaires-cards{
+    display : flex;
+    flex-direction : column;
+    gap : 30px;
+}
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
     height : 146px;
 }
 
@@ -675,7 +701,6 @@ footer {
         width : 100%;
         padding: 0px 20px 0px 20px;
         margin-bottom: 35px;
-    
       }
       
     .filtres p {
@@ -693,16 +718,15 @@ footer {
         box-sizing: border-box;
         margin-top: 20px;
         display: inline-flex;
-height: 50px;
-padding: 4px 19px;
-align-items: center;
-gap: 10px;
-flex-shrink: 0;
-border-radius: 25px;
-border: 2px solid var(--filter-bg-color);
-width : 43%;
-font-weight: bold;
-font-size: 1.1em;
+        height: 50px;
+        padding: 4px 19px;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 25px;
+        width : 43%;
+        font-weight: bold;
+        font-size: 1.1em;
     }
 
     .information-recherche {
